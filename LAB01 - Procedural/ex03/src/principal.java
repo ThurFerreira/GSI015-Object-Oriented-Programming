@@ -463,11 +463,18 @@ public class principal {
         Scanner sc = new Scanner(System.in);
         int i, j = 0;
         char classe;
-        int qtd_cadastros;
+        int qtd_cadastros = 0;
+        boolean ok = true;
         System.out.println("<< Universidade X >>");
-        System.out.println("Quantos alunos serão cadastrados: \n");
-        qtd_cadastros = sc.nextInt();
-        sc.close();
+        
+        while(ok){
+            System.out.println("Quantos alunos serão cadastrados: ");
+            qtd_cadastros = sc.nextInt();
+
+            if(qtd_cadastros <= 10000){
+                ok = false;
+            }
+        }
      
         double aluno[][] = new double[qtd_cadastros][3];
 
@@ -619,7 +626,7 @@ public class principal {
         // ex11();
         // ex12();
         // ex13();
-        // ex14();
+         ex14();
         // ex15();
         // ex16();
     }
