@@ -1,5 +1,8 @@
+package ex05;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Figurinha figurinha1 = new Figurinha("Belgica");
+        
     }
 }

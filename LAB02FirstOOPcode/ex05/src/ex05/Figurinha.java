@@ -1,6 +1,8 @@
+package ex05;
+
 import java.time.LocalDate;
 
-public class Jogador {
+public class Figurinha {
     
     private String nome;
     private LocalDate dataNascimento;
@@ -9,8 +11,8 @@ public class Jogador {
     private String posicao;
     private String pais;
     
-    Jogador(){
-
+    Figurinha(String pais){
+        this.pais = pais;
     }
 
     public void setNome(String nome) {
@@ -37,6 +39,31 @@ public class Jogador {
         this.pais = pais;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public String getPosicao() {
+        return posicao;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    
     public void show(){
         System.out.println(this.nome);
         System.out.println(this.dataNascimento);
@@ -48,3 +75,4 @@ public class Jogador {
     }
 
 }
+
