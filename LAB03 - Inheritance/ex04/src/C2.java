@@ -7,7 +7,7 @@ public class C2 extends C1 {
         System.out.printf("Classe C2: chamada do construtor sem parametros");
     }
 
-    public C2(int atributo4, int atributo5, int atributo6) {
+    public C2(int atributo1, int atributo2, int atributo3, int atributo4, int atributo5, int atributo6) {
         this.atributo4 = atributo4;
         this.atributo5 = atributo5;
         this.atributo6 = atributo6;
@@ -29,9 +29,7 @@ public class C2 extends C1 {
     }
 
     public void mostrar_atributos_super() {
-        System.out.println(super.atributo1);
-        System.out.println(super.getAtributo2());
-        System.out.println(super.atributo3);
+        super.mostrar_atributos_super();
         System.out.println(this.atributo4);
         System.out.println(this.atributo5);
         System.out.println(this.atributo6);

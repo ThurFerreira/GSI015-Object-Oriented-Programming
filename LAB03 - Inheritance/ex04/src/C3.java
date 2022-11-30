@@ -8,7 +8,7 @@ public class C3 extends C2{
     }
 
     public C3(int atributo1, int atributo2, int atributo3, int atributo4, int atributo5, int atributo6,int atributo7, int atributo8, int atributo9){
-        super(atributo4, atributo5, atributo6);
+        super(atributo1, atributo2, atributo3, atributo4, atributo5, atributo6);
         this.atributo7 = atributo7;
         this.atributo8 = atributo8;
         this.atributo9 = atributo9;
@@ -28,18 +28,9 @@ public class C3 extends C2{
         System.out.println(this.atributo9);
     }
     public void mostrar_atributos_super() {
-        System.out.println(super.atributo1);
-        System.out.println(super.getAtributo2());
-        System.out.println(super.atributo3);
-        System.out.println(super.atributo4);
-        System.out.println(super.getAtributo5());
-        System.out.println(super.atributo6);
+        super.mostrar_atributos_super();
         System.out.println(this.atributo7);
         System.out.println(this.atributo8);
         System.out.println(this.atributo9);
-
     }
-
-
-
 }
