@@ -2,6 +2,7 @@ public class Triangulo extends FormaBidimensional{
 
     public double base;
     public double altura;
+    final String desc = "é a figura geométrica que ocupa o espaço interno limitado por três segmentos de reta que concorrem, dois a dois, em três pontos diferentes formando três lados e três ângulos internos que somam 180";
 
     public Triangulo(double base, double altura) {
         this.base = base;
@@ -23,6 +24,10 @@ public class Triangulo extends FormaBidimensional{
 
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+
+    public String getDesc() {
+        return desc;
     }
 
     public void obterArea(){

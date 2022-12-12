@@ -1,6 +1,7 @@
 public class Tetraedro extends FormaTridimensional{
 
     public double lado;
+    final String desc = "Na geometria, um tetraedro, também conhecido como uma pirâmide triangular, é um poliedro composto por quatro faces triangulares, três delas encontrando-se em cada vértice";
     public double altura;
 
     public Tetraedro(double lado, double altura) {
@@ -24,6 +25,10 @@ public class Tetraedro extends FormaTridimensional{
 
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+
+    public String getDesc() {
+        return desc;
     }
 
     public void obterArea(){

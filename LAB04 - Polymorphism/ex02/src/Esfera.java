@@ -1,5 +1,6 @@
 public class Esfera extends FormaTridimensional{
     public double raio;
+    final String desc = "A esfera pode ser definida como \"uma sequência de pontos alinhados em todos os sentidos à mesma distância de um centro comum";
 
     public Esfera(double raio) {
         this.raio = raio;
@@ -13,6 +14,10 @@ public class Esfera extends FormaTridimensional{
 
     public void setRaio(double raio) {
         this.raio = raio;
+    }
+
+    public String getDesc() {
+        return desc;
     }
 
     public void obterArea(){

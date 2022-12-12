@@ -1,6 +1,7 @@
 public class Cubo extends FormaTridimensional{
 
     public double lado;
+    final String desc = "Um cubo ou hexaedro regular é um poliedro com 6 faces congruentes. Além disso, é um dos cinco sólidos platônicos";
 
     public Cubo(double lado) {
         this.lado = lado;
@@ -14,6 +15,10 @@ public class Cubo extends FormaTridimensional{
 
     public void setLado(double lado) {
         this.lado = lado;
+    }
+
+    public String getDesc() {
+        return desc;
     }
 
     public void obterArea(){
