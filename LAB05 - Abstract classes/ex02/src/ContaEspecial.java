@@ -17,6 +17,9 @@ public class ContaEspecial extends ContaCorrente{
             return ( false );
 
        debitaValor(val);
+
+        if ( getSaldo(pwd) == 0 && !(limite > 0) ) //conta especial com limite maior que zero pode ter seu saldo = 0
+            setEstado( pwd,2); // torna conta inativa
         return ( true ) ;
     }
 }
