@@ -4,6 +4,8 @@ public class Universidade {
     int doutorado = 0;
     int mestrado = 0;
     int graduacao = 0;
+    public int totalEstudantes = 0;
+
     String nome;
     LocalDate fundacao;
 
@@ -14,8 +16,8 @@ public class Universidade {
         this.fundacao = fundacao;
         this.estudantes = estudantes;
         contaEstudantes();
+        totalEstudantes += graduacao + doutorado + mestrado;
     }
-
 
     public int getDoutorado() {
         return doutorado;
@@ -43,17 +45,16 @@ public class Universidade {
 
 
     private void contaEstudantes() {
-        for (Estudante e : estudantes) {
-            if (e instanceof EstudanteDoutorado) {
-                setDoutorado(getDoutorado() + 1);
+        for(i = 0; (estudantes[i] != null); i++){
+                if (estudantes[i] instanceof EstudanteDoutorado) {
+                    setDoutorado(getDoutorado() + 1);
 
-            } else if (e instanceof EstudanteGraduacao) {
-                setGraduacao(getGraduacao() + 1);
+                } else if (estudantes[i] instanceof EstudanteGraduacao) {
+                    setGraduacao(getGraduacao() + 1);
 
-            } else if (e instanceof EstudanteMestrado) {
-                setMestrado(getMestrado() + 1);
-
-            }
+                } else if (estudantes[i] instanceof EstudanteMestrado) {
+                    setMestrado(getMestrado() + 1);
+                }
         }
     }
 
@@ -61,15 +62,16 @@ public class Universidade {
         System.out.println("A universidade tem " + getDoutorado() + " estudantes de doutorado, " + getMestrado() + " estudantes de mestrado, e " + getGraduacao() + " estudantes de graduação");
     }
 
+    int i = 0;
     public void mostraAlunos(){
-        for (Estudante e: estudantes) {
-            System.out.println(e.toString());
+            for(i = 0; i < totalEstudantes; i++) {
+                System.out.println(estudantes[i].toString());
         }
     }
 
     public void mostraAlunosCompleto(){
-        for (Estudante e: estudantes) {
-            e.print();
-        }
+        for(i = 0; i < totalEstudantes; i++) {
+                estudantes[i].print();
+            }
     }
 }

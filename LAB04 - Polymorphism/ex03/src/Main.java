@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Estudante[] estudantes = new Estudante[6];
-        Estudante[] estudantesPosGraduacao = new Estudante[5];
+        Estudante[] estudantes = new Estudante[100];
+        Estudante[] estudantesPosGraduacao = new Estudante[100];
         estudantes[0] = new EstudanteDoutorado("Bruno", "Rua Inverno", "Tecnologia", "Processamento de Imagens", "Carros Inteligentes");
         estudantes[1] = new EstudanteMestrado("Carla", "Rua Primavera", "Medicina", "Vacinas de RNA", "academico", "Anticorpos");
         estudantes[2] = new EstudanteGraduacao("Lucia", "Rua Maio", "Java is funny");
@@ -14,9 +14,10 @@ public class Main {
         estudantes[5] = new EstudanteDoutorado("Guilherme", "Rua Inverno", "Tecnologia", "Processamento de Imagens", "Carros Inteligentes");
 
         Universidade universidade1 = new Universidade("UFU", LocalDate.now(), estudantes);
-        Universidade universidade2 = new Universidade("UFU", LocalDate.now(), estudantesPosGraduacao);
 
         copiaAlunos(estudantes, estudantesPosGraduacao);
+
+        Universidade universidade2 = new Universidade("UFU", LocalDate.now(), estudantesPosGraduacao);
 
         System.out.println("| Universidade 1 |");
         System.out.println("");
