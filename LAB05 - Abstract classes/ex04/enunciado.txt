@@ -1,3 +1,5 @@
+#exercicio 04(a,b,c,d,e)
+
 Fazer os exercícios indicados no PDF na pasta anterior  (Prof. Renato) 
 Responder aqui a numeração equivalente.
 Resposta com somente códigos, sem diagramas
